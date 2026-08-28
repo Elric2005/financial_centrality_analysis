@@ -50,34 +50,46 @@ In addition, this project will:
 - Evaluate relationships between leverage, financial sector growth, and macroeconomic instability
 - Present emerical findings through clear and reproducible data visualizations
 
-## Initial Economic Indicators
+## Initial Data Visualizations
 
-The initial analysis focuses on three measures:
+The following figures provide the starting point for the project's empirical analysis. These visualizations were initially produced using Federal Reserve Economic Data (FRED). Later stages of the project will retrieve the underlying observations directly and reproduce the figures programmatically in Python.
 
-### 1. Bank Credit to the Private Nonfinancial Sector
+### Bank Credit to the Private Nonfinancial Sector
 
-This indicator measures bank credit provided to private nonfinancial borrowers relative to GDP.
+![Bank Credit to Private Nonfinancial Sector](figures/original/bank_credit_private_sector_gdp.png)
 
-It provides a measure of the real economy's dependence on bank financing and can be used to study the relationship between credit expansion, leverage, and refinancing needs.
+This figure shows bank credit to the U.S. private nonfinancial sector as a percentage of GDP. It provides a broad measure of the extent to which households and firms depend on bank-provided credit relative to total economic output.
 
-**Initial FRED series:** `QUSPBM770A`
+The long-run series shows substantial growth in bank credit relative to GDP during several periods of economic expansion, alongside significant adjustments around major downturns. Rather than establishing a causal relationship between credit growth and recessions, the series provides a starting point for examining how credit dependence and leverage evolve across the business cycle.
 
-### 2. Domestic Nonfinancial Debt Relative to GDP
+**FRED Series:** `QUSPBM770A`
 
-This indicator captures the broader debt obligations of domestic nonfinancial sectors relative to aggregate output.
+---
 
-It expands the analysis beyond bank credit alone by including the wider debt structure surrounding households and firms.
+### Domestic Nonfinancial Debt Relative to GDP
 
-**Initial FRED series:** `TCMDODNS`  
-**GDP comparison series:** `GDP`
+![Domestic Nonfinancial Debt Relative to GDP](figures/original/domestic_nonfinancial_debt_gdp.png)
 
-### 3. Finance and Insurance as a Share of GDP
+This figure measures domestic nonfinancial debt relative to U.S. GDP. Unlike the previous indicator, which focuses specifically on bank credit, this measure captures a broader portion of the debt structure surrounding households, firms, and other nonfinancial economic activity.
 
-This indicator measures the value added by the finance and insurance industry as a percentage of U.S. GDP.
+The series displays a substantial long-run increase in debt relative to economic output. This makes it useful for examining changes in aggregate leverage and the growing role of debt financing within the U.S. economy.
 
-It is used as an initial measure of the financial sector's weight within the broader economy.
+**FRED Series:** `TCMDODNS`  
+**GDP Series:** `GDP`
 
-**Initial FRED series:** `VAPGDPFI`
+---
+
+### Finance and Insurance as a Share of GDP
+
+![Finance and Insurance as a Share of GDP](figures/original/finance_insurance_share_gdp.png)
+
+This figure shows finance and insurance value added as a percentage of U.S. GDP. It provides an initial measure of the financial sector's economic weight relative to the broader economy.
+
+The series remains a significant component of U.S. output across both expansions and downturns, while also displaying noticeable changes around major economic disruptions such as the 2007–2009 financial crisis and the 2020 recession.
+
+This indicator does not directly measure financial concentration or systemic risk. Instead, it provides context for evaluating the broader economic importance of financial intermediation.
+
+**FRED Series:** `VAPGDPFI`
 
 ## Planned Methodology
 
